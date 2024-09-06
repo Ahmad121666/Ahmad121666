@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: arial, Arial, Helvetica, sans-serif;
+    /* text-align: center; */
+    background-color: hwb(240 18% 68% / 0.838);
+}
+
+#container {
+    background-color: hsla(32, 12%, 79%, 0.758);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: fit-content;
+    width: 500px;
+    max-width: 600px;
+    height: 100dvh;
+    position: relative;
+}
+
+#head-container {
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    translate: 0% 25%;
+}
+
+.toggle {
+    background: hwb(0 91% 7%);
+    height: 30%;
+    translate: -50% 145%;
+    border-radius: 20px;
+    width: 30px;
+    height: 18px;
+    padding: 1px ;
+}
+
+.dark{
+    translate: 10.5px;
+}
+.light{
+    color: black;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    background: #dbd5d5;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease;
+    padding: 20px 30px;
+    text-align: center;
+    display: none;
+}
+
+.modal-buttons {
+    padding: 10px 0;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.modal-buttons button {
+    color: black;
+    padding: 5px 20px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+}
+
+.modal-buttons button.no {
+    background: rgb(118, 216, 118);
+}
+
+.modal-buttons button.yes {
+    background: #f53636;
+}
+
+.task:hover {
+    background: rgb(234, 238, 242);
+}
+
+.task .delete {
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+}
+
+.task .delete:hover {
+    color: red;
+}
+
+#form-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.your-todos {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+
+.your-todos h2 {
+    text-decoration: underline;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.your-todos button {
+    padding: 0 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: none;
+}
+
+.your-todos button:hover {
+    background: #4ee49c;
+}
+
+input {
+    font-size: 10px;
+    height: 30px;
+    width: 300px;
+    outline-style: none;
+    background: inherit;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.laterInput {
+    visibility :hidden;
+}
+
+#p_container {
+    width: 100%;
+    height: fit-content;
+}
+
+#append{
+    color: white;
+    font-size: 10px;
+    border: none;
+    padding: 5px 40px;
+    text-align: center;
+    background: #000;
+    background-size: cover;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+#append:hover {
+    background-color: hsl(151, 74%, 60%);
+}
+
+h2 {
+    text-align: center;
+}
+
+#note {
+    color: rgb(149, 39, 39);
+    width: fit-content;
+    position: fixed;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+}
+
+.list:hover {
+    background: rgb(23, 20, 47);
+}
+
+@media (prefers-color-scheme: light) {
+    .head-container {
+        background: yellow;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .head-container {
+        background: yellow;
+    }
+}
+

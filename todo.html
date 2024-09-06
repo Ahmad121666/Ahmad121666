@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div id="container">
+        <div id="head-container">
+            <h1>TODO</h1>
+            <div class="toggle">
+                <i class="fa-solid fa-circle" id="themeToggle" onclick="toggle()"></i>
+            </div>
+        </div> 
+
+        <div id="content">
+
+            <div id="form-container">
+                <input type="text" placeholder="input your task" id="value">
+                <button type="submit" id="append" onclick="addTask()">ADD TODO</button>
+            </div>
+
+            <div id="p_container">
+                <div class="your-todos">
+                    <h2>YOUR TODO</h2>
+                    <button onclick="toggleModal()" class="delete-all">DELETE ALL TASKS</button>
+                </div>
+                <div class="todos"></div>
+            </div>
+
+            <div class="modal">
+                <p>ARE YOU SURE YOU WANT TO DELETE ALL TASKS</p>
+                <div class="modal-buttons">
+                    <button onclick="deleteAllTasks(true)" class="yes">YES</button>
+                    <button class="no" onclick="deleteAllTasks(false)">NO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+
+</html>
